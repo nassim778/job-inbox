@@ -1,120 +1,110 @@
-const lists = {
-  acceptances: document.getElementById("acceptances"),
-  rejections: document.getElementById("rejections"),
-  progress: document.getElementById("progress"),
-};
+const feed = document.getElementById("feed");
+const hero = document.getElementById("hero");
+const heroList = document.getElementById("hero-list");
 
 let data = {
   lastScanAt: null,
   account: "",
-  newSinceLastScan: { acceptances: 0, rejections: 0 },
+  windowDays: 30,
   acceptances: [],
   rejections: [],
-  inProgress: [],
+  important: [],
 };
 
+let view = "all";
+
 function formatDate(value) {
-  if (!value) return "Unknown date";
+  if (!value) return "";
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return value;
-  return date.toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-}
-
-function card(item, kind) {
-  const article = document.createElement("article");
-  article.className = "card";
-  article.innerHTML = `
-    <span class="tag ${kind}">${kind === "offer" ? "Accepted" : kind === "reject" ? "Rejected" : "Waiting"}</span>
-    <header>
-      <h3 class="company"></h3>
-      <span class="date"></span>
-    </header>
-    <p class="role"></p>
-    <p class="reason"></p>
-    <p class="excerpt"></p>
-  `;
-  article.querySelector(".company").textContent = item.company || "Unknown company";
-  article.querySelector(".date").textContent = formatDate(item.date);
-  article.querySelector(".role").textContent = item.role || "Role not specified";
-  article.querySelector(".reason").textContent = item.reason || "";
-  article.querySelector(".excerpt").textContent = item.excerpt ? `“${item.excerpt}”` : "";
-  return article;
-}
-
-function empty(text) {
-  const div = document.createElement("div");
-  div.className = "empty";
-  div.textContent = text;
-  return div;
+  return date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
 }
 
 function matches(item, query) {
   if (!query) return true;
-  const blob = `${item.company} ${item.role} ${item.subject} ${item.reason}`.toLowerCase();
-  return blob.includes(query);
+  return `${item.company} ${item.role} ${item.subject} ${item.reason} ${item.excerpt}`
+    .toLowerCase()
+    .includes(query);
+}
+
+function row(item, kind, label) {
+  const el = document.createElement("article");
+  el.className = `row ${kind}`;
+  el.innerHTML = `
+    <span class="tick"></span>
+    <div>
+      <h3 class="who"></h3>
+      <p class="role"></p>
+      <p class="why"></p>
+      <p class="excerpt"></p>
+    </div>
+    <div class="meta-col">
+      <span class="badge"></span>
+      <span class="when"></span>
+    </div>
+  `;
+  el.querySelector(".who").textContent = item.company || "Unknown sender";
+  el.querySelector(".role").textContent = item.role || item.subject || "";
+  el.querySelector(".why").textContent = item.reason || "";
+  el.querySelector(".excerpt").textContent = item.excerpt || "";
+  el.querySelector(".badge").textContent = label;
+  el.querySelector(".when").textContent = formatDate(item.date);
+  return el;
 }
 
 function render() {
   const query = document.getElementById("q").value.trim().toLowerCase();
-  const onlyNew = document.querySelector("[data-filter].active")?.dataset.filter === "new";
-  const cutoff = data.lastScanAt
-    ? new Date(new Date(data.lastScanAt).getTime() - 36 * 60 * 60 * 1000)
-    : null;
+  const offers = (data.acceptances || []).filter((item) => matches(item, query));
+  const rejects = (data.rejections || []).filter((item) => matches(item, query));
+  const important = (data.important || []).filter((item) => matches(item, query));
 
-  function isNew(item) {
-    if (!onlyNew || !cutoff || !item.date) return true;
-    return new Date(item.date) >= cutoff;
+  document.getElementById("n-offers").textContent = (data.acceptances || []).length;
+  document.getElementById("n-rejects").textContent = (data.rejections || []).length;
+  document.getElementById("n-important").textContent = (data.important || []).length;
+  document.getElementById("window-label").textContent = `Last ${data.windowDays || 30} days`;
+  document.getElementById("meta").textContent = data.lastScanAt
+    ? `Scanned ${formatDate(data.lastScanAt)}\n${data.account || ""}`
+    : "No scan yet";
+
+  const showHero = view === "all" && important.length && !query;
+  hero.hidden = !showHero;
+  heroList.replaceChildren();
+  if (showHero) {
+    important.slice(0, 4).forEach((item) => heroList.append(row(item, "important", "Important")));
   }
 
-  const offers = data.acceptances.filter((item) => matches(item, query) && isNew(item));
-  const rejects = data.rejections.filter((item) => matches(item, query) && isNew(item));
-  const waiting = (data.inProgress || []).filter((item) => matches(item, query));
-
-  document.getElementById("n-offers").textContent = data.acceptances.length;
-  document.getElementById("n-rejects").textContent = data.rejections.length;
-  document.getElementById("n-progress").textContent = (data.inProgress || []).length;
-  document.getElementById("meta").innerHTML = data.lastScanAt
-    ? `Last scan ${formatDate(data.lastScanAt)}<br>${data.account || ""}`
-    : "No scan data yet";
-
-  lists.acceptances.replaceChildren(
-    ...offers.map((item) => card(item, "offer")),
-  );
-  if (!offers.length) {
-    lists.acceptances.append(empty("No acceptances yet. New offers will land here."));
+  const groups = [];
+  if (view === "all" || view === "offer") groups.push(...offers.map((item) => ["offer", "Offer", item]));
+  if (view === "all" || view === "reject") groups.push(...rejects.map((item) => ["reject", "Rejected", item]));
+  if (view === "important" || (view === "all" && query)) {
+    groups.push(...important.map((item) => ["important", "Important", item]));
   }
 
-  lists.rejections.replaceChildren(
-    ...rejects.map((item) => card(item, "reject")),
-  );
-  if (!rejects.length) {
-    lists.rejections.append(empty(onlyNew ? "No new rejections in this scan." : "No rejections found."));
+  groups.sort((a, b) => String(b[2].date).localeCompare(String(a[2].date)));
+  feed.replaceChildren();
+  if (!groups.length) {
+    const empty = document.createElement("div");
+    empty.className = "empty";
+    empty.textContent = "Nothing in this view for the last 30 days.";
+    feed.append(empty);
+    return;
   }
-
-  lists.progress.replaceChildren(
-    ...waiting.map((item) => card(item, "wait")),
-  );
-  if (!waiting.length) {
-    lists.progress.append(empty("No open processes waiting on a decision."));
-  }
+  groups.forEach(([kind, label, item]) => feed.append(row(item, kind, label)));
 }
 
 document.getElementById("q").addEventListener("input", render);
-document.querySelectorAll("[data-filter]").forEach((button) => {
+document.querySelectorAll("[data-view]").forEach((button) => {
   button.addEventListener("click", () => {
-    document.querySelectorAll("[data-filter]").forEach((el) => el.classList.remove("active"));
+    document.querySelectorAll("[data-view]").forEach((el) => el.classList.remove("active"));
     button.classList.add("active");
+    view = button.dataset.view;
     render();
   });
 });
 
 fetch("data/jobs.json", { cache: "no-store" })
   .then((res) => {
-    if (!res.ok) throw new Error("Missing jobs.json");
+    if (!res.ok) throw new Error("missing json");
     return res.json();
   })
   .then((json) => {
@@ -122,6 +112,6 @@ fetch("data/jobs.json", { cache: "no-store" })
     render();
   })
   .catch(() => {
-    document.getElementById("meta").textContent = "Could not load data/jobs.json. Open this folder via a web server or GitHub Pages.";
+    document.getElementById("meta").textContent = "Could not load data/jobs.json";
     render();
   });

@@ -6,47 +6,41 @@
     <title>Job Inbox</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,480;8..60,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="wrap">
-      <section class="top">
-        <div>
-          <p class="kicker">Gmail job filter</p>
-          <h1>Your hiring inbox</h1>
+    <div class="app">
+      <aside class="rail">
+        <div class="brand">
+          <span class="mark"></span>
+          <div>
+            <strong>Job Inbox</strong>
+            <small id="window-label">Last 30 days</small>
+          </div>
         </div>
-        <p class="meta" id="meta">Loading latest scan…</p>
-      </section>
+        <nav class="nav">
+          <button data-view="all" class="active">All mail</button>
+          <button data-view="offer">Offers <b id="n-offers">0</b></button>
+          <button data-view="reject">Rejections <b id="n-rejects">0</b></button>
+          <button data-view="important">Important <b id="n-important">0</b></button>
+        </nav>
+        <p class="scan" id="meta">Loading…</p>
+      </aside>
 
-      <section class="stats">
-        <article class="stat offer"><b id="n-offers">0</b><span>Acceptances / offers</span></article>
-        <article class="stat reject"><b id="n-rejects">0</b><span>Rejections</span></article>
-        <article class="stat wait"><b id="n-progress">0</b><span>Still in progress</span></article>
-      </section>
+      <main>
+        <header class="bar">
+          <input id="q" type="search" placeholder="Filter by company, role, or subject" />
+        </header>
 
-      <div class="toolbar">
-        <input id="q" type="search" placeholder="Search company or role" />
-        <button data-filter="all" class="active">All</button>
-        <button data-filter="new">New this scan</button>
-      </div>
+        <section class="hero" id="hero" hidden>
+          <p class="hero-kicker">Needs attention</p>
+          <div class="hero-list" id="hero-list"></div>
+        </section>
 
-      <section class="board">
-        <div class="col">
-          <h2>Acceptances</h2>
-          <div class="list" id="acceptances"></div>
-        </div>
-        <div class="col">
-          <h2>Rejections</h2>
-          <div class="list" id="rejections"></div>
-        </div>
-      </section>
-
-      <section class="progress">
-        <h2>In progress</h2>
-        <div class="list" id="progress"></div>
-      </section>
-    </main>
+        <section class="feed" id="feed"></section>
+      </main>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

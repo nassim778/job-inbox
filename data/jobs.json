@@ -1,293 +1,85 @@
 {
-  "lastScanAt": "2026-09-08T12:25:55Z",
+  "lastScanAt": "2026-09-08T13:23:00Z",
   "account": "nassim.rached777@gmail.com",
+  "windowDays": 30,
   "newSinceLastScan": {
     "acceptances": 0,
-    "rejections": 0
+    "rejections": 3,
+    "important": 4
   },
   "acceptances": [],
   "rejections": [
     {
       "id": "1a03d0906a672c2b",
       "company": "Utimaco",
-      "role": "Application (first role)",
+      "role": "Application",
       "date": "2026-08-26",
       "from": "candidate-9n5pm6zt@utimaco.dvinci-easy.com",
       "subject": "Your application to Utimaco",
-      "reason": "Position filled with another candidate",
+      "reason": "Role filled with another candidate",
       "excerpt": "After further evaluation of our candidate pool, we have already been able to fill the position with another candidate."
     },
     {
       "id": "1a03d08fdce5284a",
       "company": "Utimaco",
-      "role": "Application (second role)",
+      "role": "Second application",
       "date": "2026-08-26",
       "from": "candidate-sd2vd8bm@utimaco.dvinci-easy.com",
       "subject": "Your application to Utimaco",
-      "reason": "Position filled with another candidate",
+      "reason": "Role filled with another candidate",
       "excerpt": "After further evaluation of our candidate pool, we have already been able to fill the position with another candidate."
     },
     {
       "id": "1a02824f75c750de",
       "company": "Hello Jobs",
-      "role": "Truck Driver in Germany / placement search",
+      "role": "Placement search / Truck Driver in Germany",
       "date": "2026-08-22",
       "from": "krunoslav.belan@personalkonzeptemielkesabatagbr.teamtailor-mail.com",
       "subject": "Hello Jobs | Vielen Dank für das Interesse!",
-      "reason": "No matching roles to offer right now",
+      "reason": "No matching roles right now",
       "excerpt": "Wir haben die letzten Tage genutzt, um passende Stellen für dich zu finden, aber können dir im Moment leider nichts anbieten."
-    },
-    {
-      "id": "19f92f2b1819e9b7",
-      "company": "Dibber",
-      "role": "Application",
-      "date": "2026-07-24",
-      "from": "bewerbung@dibber.de",
-      "subject": "Ihre Bewerbung bei Dibber",
-      "reason": "Not shortlisted",
-      "excerpt": "Nach interner Prüfung Ihrer Bewerbung sind wir zu dem Ergebnis gekommen, Ihre Bewerbung nicht in die engere Wahl zu nehmen."
-    },
-    {
-      "id": "19d39fa1b70c13a6",
-      "company": "Accepted Ltd",
-      "role": "Junior Business Analyst | Intelligent Document Processing & AI Solutions",
-      "date": "2026-05-12",
-      "from": "noreply@candidates.workablemail.com",
-      "subject": "Junior Business Analyst | Intelligent Document Processing & AI Solutions - Accepted ltd",
-      "reason": "Will not proceed with this application",
-      "excerpt": "We regret to inform you that we will not be proceeding with your application for this role."
-    },
-    {
-      "id": "19e015ce0159403a",
-      "company": "CHEFS CULINAR Süd",
-      "role": "Duales Studium – BWL, Schwerpunkt Logistik (01.09.2026)",
-      "date": "2026-05-07",
-      "from": "meine-karriere@chefsculinar.de",
-      "subject": "Ihre Bewerbung",
-      "reason": "Not selected after review and interviews",
-      "excerpt": "Leider konnten wir Dich nicht berücksichtigen."
-    },
-    {
-      "id": "19df249ce467dab5",
-      "company": "CHEFS CULINAR Nord-Ost",
-      "role": "Ausbildung zur Fachkraft für Lagerlogistik (m/w/d) zum 01.08.2026",
-      "date": "2026-05-04",
-      "from": "meine-karriere@chefsculinar.de",
-      "subject": "Ihre Bewerbung",
-      "reason": "Not selected after review and interviews",
-      "excerpt": "Leider konnten wir Dich nicht berücksichtigen."
-    },
-    {
-      "id": "19d39da38d46d602",
-      "company": "Optasia",
-      "role": "Junior Data Engineer, Fintech",
-      "date": "2026-04-24",
-      "from": "noreply@candidates.workablemail.com",
-      "subject": "Junior Data Engineer, Fintech - Optasia",
-      "reason": "Moving forward with other candidates",
-      "excerpt": "After careful consideration, we have decided to move forward with other candidates."
-    },
-    {
-      "id": "19db4e6bc313cc10",
-      "company": "CITTI / HMS Hanseatic Marine Services",
-      "role": "Ausbildung zum Fachkraft (m/w/d) für Lagerlogistik",
-      "date": "2026-04-22",
-      "from": "meine-karriere@citti.de",
-      "subject": "Ihre Bewerbung",
-      "reason": "Not considered after preselection",
-      "excerpt": "Wir bedauern, Dir mitteilen zu müssen, dass wir Deine Bewerbung nach einer Vorauswahl nicht berücksichtigen konnten."
-    },
-    {
-      "id": "19daf8145ae604a1",
-      "company": "EXTRA Immobilien Gruppe GmbH",
-      "role": "4.1 - IT & Automation Intern - Paid Student Internship",
-      "date": "2026-04-21",
-      "from": "no-reply@msg.join.com",
-      "subject": "Your application at EXTRA Immobilien Gruppe GmbH",
-      "reason": "Not moving forward in recruiting",
-      "excerpt": "For the moment, we are not able to move forward in the recruiting process with you."
-    },
-    {
-      "id": "19daf022c9001052",
-      "company": "Daimler Truck AG",
-      "role": "Monteur GFZ-Instandhaltung (m/w/d) — TruckStore Erfurt",
-      "date": "2026-04-21",
-      "from": "exdu.fa.sender@workflow.mail.em2.cloud.oracle.com",
-      "subject": "Rückmeldung zu deiner Bewerbung - Monteur GFZ-Instandhaltung (m/w/d) bei der Daimler Truck AG, TruckStore Erfurt",
-      "reason": "Not included in further selection",
-      "excerpt": "Leider konnten wir dich beim weiteren Auswahlprozess dieser Stelle nicht berücksichtigen."
-    },
-    {
-      "id": "19daa26fcc8c529e",
-      "company": "CHEFS CULINAR West",
-      "role": "Ausbildung zum Berufskraftfahrer (m/w/d)",
-      "date": "2026-04-20",
-      "from": "meine-karriere@chefsculinar.de",
-      "subject": "Ihre Bewerbung",
-      "reason": "Not considered after preselection",
-      "excerpt": "Wir bedauern, Dir mitteilen zu müssen, dass wir Deine Bewerbung nach einer Vorauswahl nicht berücksichtigen konnten."
-    },
-    {
-      "id": "19d9ab8fa66d1ced",
-      "company": "FERCHAU Karlsruhe IT",
-      "role": "Application",
-      "date": "2026-04-17",
-      "from": "beate.fischer@ferchau.com",
-      "subject": "Your application to FERCHAU Karlsruhe IT",
-      "reason": "No matching position at that branch",
-      "excerpt": "We cannot offer you a position in our branch FERCHAU Karlsruhe IT that matches your professional qualifications."
-    },
-    {
-      "id": "19d75c36b8b59dfc",
-      "company": "Mondi",
-      "role": "Logistikmitarbeiter (m/w/d)",
-      "date": "2026-04-10",
-      "from": "system@successfactors.eu",
-      "subject": "Your Application to Logistikmitarbeiter (m/w/d) position at Mondi",
-      "reason": "Application will not be considered further",
-      "excerpt": "We regret to inform you that at this time your application will not be further considered for this job position."
-    },
-    {
-      "id": "19d668a8b242fe89",
-      "company": "SIDESTREAM",
-      "role": "Application",
-      "date": "2026-04-07",
-      "from": "judith.classen@sidestream.msg.join.com",
-      "subject": "Thanks for your application",
-      "reason": "Not moving forward",
-      "excerpt": "For the moment, we are not able to move forward in the recruiting process with you."
-    },
-    {
-      "id": "19d667c40aa53991",
-      "company": "REMONDIS",
-      "role": "Ausbildung zum Berufskraftfahrer (m/w/d)",
-      "date": "2026-04-07",
-      "from": "no-reply-remondis@concludis.de",
-      "subject": "Deine Bewerbung in unserem Unternehmen",
-      "reason": "Not shortlisted for further selection",
-      "excerpt": "Leider können wir deine Bewerbung im weiteren Auswahlverfahren nicht weiter berücksichtigen."
-    },
-    {
-      "id": "19d61ef97904971c",
-      "company": "Evolution",
-      "role": "Finnish Speaking Game Presenter",
-      "date": "2026-04-06",
-      "from": "notifications@smartrecruiters.com",
-      "subject": "Thanks for applying at Evolution",
-      "reason": "Not shortlisted",
-      "excerpt": "On this occasion, you haven't been shortlisted for the role."
-    },
-    {
-      "id": "19d6102b6cfb2f57",
-      "company": "Rohde & Schwarz",
-      "role": "Ausbildung zum Fachinformatiker (m/w/d) Fachrichtung Systemintegration zum 01.09.2026",
-      "date": "2026-04-06",
-      "from": "system.admin@avature.net",
-      "subject": "Rohde & Schwarz: Your application - Ausbildung zum Fachinformatiker (m/w/d) Fachrichtung Systemintegration zum 01.09.2026 (ID 12244)",
-      "reason": "Not included in the next stage",
-      "excerpt": "Unfortunately we cannot include your application in the next stage of the selection process."
-    },
-    {
-      "id": "19d5eb20a8f4c172",
-      "company": "Mondi",
-      "role": "Berufskraftfahrer (w/m/d)",
-      "date": "2026-04-05",
-      "from": "system@successfactors.eu",
-      "subject": "Your Application to Berufskraftfahrer (w/m/d) position at Mondi",
-      "reason": "Application will not be considered further",
-      "excerpt": "Your application will not be further considered for this job position."
-    },
-    {
-      "id": "19d580b20d747729",
-      "company": "Mondi",
-      "role": "Ausbildung für Speditions- und Logistikdienstleistungskaufleute (w/m/d) 2026",
-      "date": "2026-04-04",
-      "from": "system@successfactors.eu",
-      "subject": "Your Application to Ausbildung für Speditions- und Logistikdienstleistungskaufleute (w/m/d) 2026 position at Mondi",
-      "reason": "Application will not be considered further",
-      "excerpt": "Your application will not be further considered for this job position."
-    },
-    {
-      "id": "19d580b207d9cbc5",
-      "company": "Mondi",
-      "role": "Ausbildung zum Berufskraftfahrer (w/m/d) 2026",
-      "date": "2026-04-04",
-      "from": "system@successfactors.eu",
-      "subject": "Your Application to Ausbildung zum Berufskraftfahrer (w/m/d) 2026 position at Mondi",
-      "reason": "Application will not be considered further",
-      "excerpt": "Your application will not be further considered for this job position."
-    },
-    {
-      "id": "19d48e683e09fae3",
-      "company": "EPG (Ehrhardt Partner Group)",
-      "role": "Ausbildung - Fachinformatiker (m/w/d) Schwerpunkt Systemintegration",
-      "date": "2026-04-01",
-      "from": "leoninora.aurastheus+8yanjk@jobs-ads.epg.com",
-      "subject": "Ihre Bewerbung bei der EPG / Your application at EPG",
-      "reason": "Will not pursue the application",
-      "excerpt": "We will not be pursuing your application for Ausbildung - Fachinformatiker further at this point."
-    },
-    {
-      "id": "19d4598ae90bd4a7",
-      "company": "General Soft Drinks (via Talexio)",
-      "role": "IT Junior Software Developer",
-      "date": "2026-03-31",
-      "from": "gsd@talexio.com",
-      "subject": "Your application has been closed",
-      "reason": "Will not proceed after shortlisting",
-      "excerpt": "We will not be able to proceed further with your application for this particular career opportunity."
-    },
-    {
-      "id": "19d457d371332cc1",
-      "company": "IFH Capital Trader (via Talexio)",
-      "role": "Junior AML Assistant",
-      "date": "2026-03-31",
-      "from": "ifh-capital-trader-ltd@talexio.com",
-      "subject": "Your application has been closed",
-      "reason": "Will not proceed after shortlisting",
-      "excerpt": "We will not be able to proceed further with your application for this particular career opportunity."
-    },
-    {
-      "id": "19d449fce0345a3b",
-      "company": "SalesCaptain",
-      "role": "Junior Data Specialist",
-      "date": "2026-03-31",
-      "from": "nefeli@salescaptain.io",
-      "subject": "Junior Data Specialist - SalesCaptain",
-      "reason": "Moving forward with other candidates",
-      "excerpt": "We’ve decided to move forward with other candidates whose profiles are a closer match to the immediate priorities of the role."
-    },
-    {
-      "id": "19d42ec72b07cf6a",
-      "company": "ALUMIL",
-      "role": "Junior IT Application Consultant",
-      "date": "2026-03-31",
-      "from": "4e78vu8yv34k+lj9p@inbound.workablemail.com",
-      "subject": "Junior IT Application Consultant - ALUMIL",
-      "reason": "Moving forward with other candidates",
-      "excerpt": "We have decided to move forward with other candidates whose profiles more closely match the requirements of this role."
-    },
-    {
-      "id": "19d39d1b59ca3a55",
-      "company": "Φυσικό Αέριο – Ελληνική Εταιρεία Ενέργειας",
-      "role": "Junior HR Talent Acquisition Specialist",
-      "date": "2026-03-30",
-      "from": "noreply@candidates.workablemail.com",
-      "subject": "Junior HR Talent Acquisition Specialist - Φυσικό Αέριο-Ελληνική Εταιρεία Ενέργειας",
-      "reason": "Profile not selected",
-      "excerpt": "We regret to inform you that your profile has not been selected."
     }
   ],
-  "inProgress": [
+  "important": [
     {
-      "id": "19d5209d98a47b2c",
-      "company": "Teleperformance Greece",
-      "role": "German-speaking customer expert / recruiting process",
-      "date": "2026-04-03",
-      "from": "muhammed.chiousmenoglou@teleperformance.com",
-      "subject": "Working in Greece?",
-      "reason": "HR outreach, assessment, and interview started — no offer or rejection yet",
-      "excerpt": "I received your application and tried to reach you to see if you would be interested in working in Greece."
+      "id": "1a06d874c9a7d88b",
+      "company": "CVwizard",
+      "role": "CV about to be deleted",
+      "date": "2026-09-04",
+      "from": "support+uk@cvwizard.com",
+      "subject": "Sign up before your CV will be deleted",
+      "reason": "Action needed: sign up within 14 days or the CV is removed",
+      "excerpt": "Don't lose the progress on your CV and sign up within 14 days to prevent your data from being deleted."
+    },
+    {
+      "id": "1a039558149c4b61",
+      "company": "CCI Education",
+      "role": "Orientation booking incomplete",
+      "date": "2026-08-25",
+      "from": "info@cci-education.com",
+      "subject": "Merci pour votre inscription ! Complétez votre formulaire pour réserver",
+      "reason": "Action needed: finish the form to book a personal orientation",
+      "excerpt": "Nous avons bien reçu votre demande. Pour réserver votre orientation personnalisée, il vous suffit de compléter le formulaire."
+    },
+    {
+      "id": "1a01fcc0b6e8a753",
+      "company": "Hello Jobs",
+      "role": "Truck Driver in Germany",
+      "date": "2026-08-20",
+      "from": "no-reply@personalkonzeptemielkesabatagbr.teamtailor-mail.com",
+      "subject": "Complete the application for Truck Driver in Germany – Your Chance with hello jobs!",
+      "reason": "Action needed: verify email to finish the application",
+      "excerpt": "Just one step left to complete your application. Click the button below to verify."
+    },
+    {
+      "id": "1a01fc6ed7e2b5f0",
+      "company": "Hello Jobs",
+      "role": "Application received",
+      "date": "2026-08-20",
+      "from": "krunoslav.belan@personalkonzeptemielkesabatagbr.teamtailor-mail.com",
+      "subject": "Hello Jobs | Danke für deine Bewerbung",
+      "reason": "They confirmed the application and said they will follow up",
+      "excerpt": "Wir haben soeben deine Bewerbung/Anfrage erhalten. Bleib dran, wir werden uns bei dir melden."
     }
   ]
 }
