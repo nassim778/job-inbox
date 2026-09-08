@@ -1,11 +1,11 @@
 {
-  "lastScanAt": "2026-09-08T13:23:00Z",
+  "lastScanAt": "2026-09-08T14:11:50Z",
   "account": "nassim.rached777@gmail.com",
   "windowDays": 30,
   "newSinceLastScan": {
     "acceptances": 0,
-    "rejections": 3,
-    "important": 4
+    "rejections": 0,
+    "important": 1
   },
   "acceptances": [],
   "rejections": [
@@ -60,6 +60,16 @@
       "subject": "Merci pour votre inscription ! Complétez votre formulaire pour réserver",
       "reason": "Action needed: finish the form to book a personal orientation",
       "excerpt": "Nous avons bien reçu votre demande. Pour réserver votre orientation personnalisée, il vous suffit de compléter le formulaire."
+    },
+    {
+      "id": "1a0293b541f6acd5",
+      "company": "LKW-Fahrer-Gesucht",
+      "role": "Applicant profile not activated",
+      "date": "2026-08-22",
+      "from": "kontakt@lkw-fahrer-gesucht.com",
+      "subject": "Jetzt Dein Bewerber-Profil sichtbar machen!",
+      "reason": "Action needed: confirm email to activate the applicant profile",
+      "excerpt": "Es sind nur noch wenige Schritte bis zum Abschluss Deiner Registrierung. Bitte bestätige jetzt Deine E-Mail-Adresse zur Aktivierung Deines Bewerber-Profils."
     },
     {
       "id": "1a01fcc0b6e8a753",
