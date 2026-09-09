@@ -1,11 +1,11 @@
 {
-  "lastScanAt": "2026-09-08T13:23:00Z",
+  "lastScanAt": "2026-09-09T12:43:10Z",
   "account": "nassim.rached777@gmail.com",
   "windowDays": 30,
   "newSinceLastScan": {
     "acceptances": 0,
-    "rejections": 3,
-    "important": 4
+    "rejections": 0,
+    "important": 2
   },
   "acceptances": [],
   "rejections": [
@@ -42,6 +42,16 @@
   ],
   "important": [
     {
+      "id": "1a082abaf13b036d",
+      "company": "FERCHAU",
+      "role": "Talent pool / future projects",
+      "date": "2026-09-08",
+      "from": "noreply@ferchau.com",
+      "subject": "FERCHAU: We would like to stay in touch with you.",
+      "reason": "Action needed: consent by 2026-09-29 so they can contact you about future projects",
+      "excerpt": "In order to also be allowed to approach you for new projects in the future, we need your consent by September 29, 2026."
+    },
+    {
       "id": "1a06d874c9a7d88b",
       "company": "CVwizard",
       "role": "CV about to be deleted",
@@ -60,6 +70,16 @@
       "subject": "Merci pour votre inscription ! Complétez votre formulaire pour réserver",
       "reason": "Action needed: finish the form to book a personal orientation",
       "excerpt": "Nous avons bien reçu votre demande. Pour réserver votre orientation personnalisée, il vous suffit de compléter le formulaire."
+    },
+    {
+      "id": "1a0293b541f6acd5",
+      "company": "LKW-Fahrer-Gesucht",
+      "role": "Applicant profile not activated",
+      "date": "2026-08-22",
+      "from": "kontakt@lkw-fahrer-gesucht.com",
+      "subject": "Jetzt Dein Bewerber-Profil sichtbar machen!",
+      "reason": "Action needed: confirm email to activate the applicant profile",
+      "excerpt": "Es sind nur noch wenige Schritte bis zum Abschluss Deiner Registrierung. Bitte bestätige jetzt Deine E-Mail-Adresse zur Aktivierung Deines Bewerber-Profils."
     },
     {
       "id": "1a01fcc0b6e8a753",
